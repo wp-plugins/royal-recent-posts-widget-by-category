@@ -3,9 +3,9 @@
 Plugin Name: Royal Recent Posts Widget by Category
 Plugin URI: http://wordpress.org/plugins/royal-recent-posts-widget-by-category/
 Description: Display Recent Posts in Widget by Category
-Author: Mehdi Akram
-Version: 1.0
-Author URI: http://shamokaldarpon.com/
+Author: SM Mehdi Akram
+Version: 1.1
+Author URI: http://www.shamokaldarpon.com/
 */
 
 
@@ -142,6 +142,8 @@ function update($new_instance, $old_instance) {
  * The configuration form.
  */
 function form($instance) {
+$title = ( !empty( $instance['title'] ) ) ? $instance['title'] : '';	
+$num = ( !empty( $instance['num'] ) ) ? $instance['num'] : 5;	
 ?>
 		<p>
 			<label for="<?php echo $this->get_field_id("title"); ?>">
